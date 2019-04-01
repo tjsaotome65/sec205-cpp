@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+	//this is a test edit
 	int month = 1;
 	int sales = 0;
 	int totalSales = 0;

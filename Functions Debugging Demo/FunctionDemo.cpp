@@ -1,10 +1,9 @@
 //
-//
 // SEC205 Spring 2019
 //
 // Chapters 9 and 10
 //
-// Function Demo using the GDB (GNu Debugger)
+// Function Demo using the GDB (GNU Debugger)
 //
 #include <iostream>
 #include <cmath>
@@ -12,25 +11,21 @@
 using namespace std;
 
 // function prototypes
-double getArea(double);  				// This is an example of value returning function
+double getArea();  				// This is an example of value returning function
 void displayResults(double, double);	// This is an example of void funcion
 
 
 // main function
 int main() {
 
-	double radius = 0.0;		// radious of a circle
+	const double RADIUS = 4.5;	// radius of a circle
 	double totalArea = 0.0;		// total area of the given circle with the radius
 
-	// Calculates the area of circle
-
-	radius = 4.5;
-
 	// Calculate the total area of a circle
-	totalArea = getArea(radius);
+	totalArea = getArea(RADIUS);
 
 	// display the results to STD OUT
-	displayResults(radius, totalArea);
+	displayResults(RADIUS, totalArea);
 
 	return 0;
 }
@@ -44,18 +39,20 @@ double getArea(double rad)
 
 	area = PI * pow(rad, 2);
 
-	return area;
+	return area;  // returns the calculated area
 
 }  //end getArea function
 
 // displayResults function
-void displayResults(double rad, double area) {
+void displayResults(double total_area, double rad) {
 
-	int temp1;				// local variables that are defined but not used - on purpose
-	int temp2 = 0;			// local variable 2
+	int temp1 = 1;			// local variables that are defined but not used - on purpose
+	int temp2 = 2;			// local variable 2
 	double temp3 = 0.0;		// local vairable 3
 
-	cout << "Total Area of Circle with Radius of " << rad << " is " << area << endl;
+	temp3 = temp1 * temp2;
+
+	cout << "Total Area of Circle with Radius of " << rad << " is " << total_area << endl;
 
 	return;
 }
